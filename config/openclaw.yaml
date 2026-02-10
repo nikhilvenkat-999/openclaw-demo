@@ -1,0 +1,62 @@
+# OpenClaw Configuration
+# Using Ollama for FREE local LLM (no API keys needed)
+
+app:
+  name: "OpenClaw Demo"
+  version: "1.0.0"
+  environment: "development"
+
+# AI Model Configuration - Using Ollama (FREE)
+ai:
+  provider: "ollama"
+  host: "http://localhost:11434"
+  model: "llama3.2"
+  options:
+    temperature: 0.7
+    max_tokens: 2048
+    timeout: 60000
+
+# Discord Channel Configuration
+channels:
+  discord:
+    enabled: true
+    # Token loaded from environment variable
+    token: "${DISCORD_BOT_TOKEN}"
+    options:
+      prefix: "!claw"  # Or mention the bot
+      respond_to_mentions: true
+      respond_to_dms: true
+
+# Skills Configuration
+skills:
+  enabled:
+    - "pipeline-monitor"
+    - "sql-agent"
+    - "report-generator"
+
+  paths:
+    - "./src/skills"
+
+# Memory Configuration
+memory:
+  enabled: true
+  type: "local"
+  path: "./data/memory"
+
+# Logging
+logging:
+  level: "info"
+  format: "pretty"
+
+# Security
+security:
+  sandbox_enabled: true
+  allowed_commands:
+    - "ls"
+    - "cat"
+    - "echo"
+    - "date"
+  blocked_paths:
+    - "/etc"
+    - "/root"
+    - "~/.ssh"

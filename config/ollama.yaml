@@ -1,0 +1,77 @@
+# Ollama Configuration
+# Ollama runs AI models locally - completely FREE
+
+# Connection
+host: "http://localhost:11434"
+
+# Model Selection
+# Smaller models = faster but less capable
+# Larger models = slower but smarter
+model:
+  # Default model for general tasks
+  default: "llama3.2"
+
+  # Model for code-related tasks
+  code: "codellama"
+
+  # Available models (run: ollama pull <model>)
+  available:
+    - name: "llama3.2"
+      size: "2GB"
+      description: "Fast, good for demos"
+      recommended: true
+
+    - name: "llama3.2:3b"
+      size: "3GB"
+      description: "Better quality"
+
+    - name: "mistral"
+      size: "4GB"
+      description: "Good balance of speed/quality"
+
+    - name: "codellama"
+      size: "4GB"
+      description: "Specialized for code"
+
+    - name: "phi3"
+      size: "2GB"
+      description: "Microsoft's small model"
+
+# Generation Parameters
+parameters:
+  temperature: 0.7      # 0-1, higher = more creative
+  top_p: 0.9           # Nucleus sampling
+  max_tokens: 2048     # Max response length
+  repeat_penalty: 1.1  # Reduce repetition
+
+# Timeouts
+timeouts:
+  connect: 5000        # 5 seconds
+  generate: 60000      # 60 seconds
+
+# System Prompts
+system_prompts:
+  default: |
+    You are OpenClaw, an AI assistant that helps with data engineering tasks.
+    You can:
+    - Monitor data pipelines
+    - Query databases using natural language
+    - Generate reports
+    - Automate routine tasks
+
+    Be concise and helpful. Format responses clearly.
+
+  pipeline_monitor: |
+    You are a data pipeline monitoring assistant.
+    Analyze pipeline status and provide clear summaries.
+    Alert on failures and suggest fixes.
+
+  sql_agent: |
+    You are a SQL expert. Convert natural language questions to SQL queries.
+    Always explain the query briefly.
+    Available tables: customers, orders, products
+
+  report_generator: |
+    You are a report generator.
+    Create clear, executive-friendly summaries.
+    Use bullet points and highlight key metrics.

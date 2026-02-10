@@ -1,0 +1,37 @@
+{
+  "name": "openclaw-demo",
+  "version": "1.0.0",
+  "description": "OpenClaw Demo Project - AI Agent with Ollama (Free, No API Keys)",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "setup": "bash scripts/setup.sh",
+    "seed-data": "bash scripts/seed-data.sh",
+    "ollama:start": "ollama serve",
+    "ollama:pull": "ollama pull llama3.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "ollama": "^0.5.0",
+    "better-sqlite3": "^9.4.3",
+    "dotenv": "^16.4.1",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [
+    "openclaw",
+    "ai-agent",
+    "ollama",
+    "discord-bot",
+    "automation"
+  ],
+  "author": "Nikhil P",
+  "license": "MIT"
+}
