@@ -5,7 +5,7 @@ This guide walks you through creating a Discord bot for the OpenClaw demo.
 **Time Required**: ~5 minutes
 **Cost**: FREE
 
----
+--
 
 ## Step 1: Create Discord Application
 

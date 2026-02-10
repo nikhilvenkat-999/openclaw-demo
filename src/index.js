@@ -2,7 +2,7 @@
  * OpenClaw Demo - Main Entry Point
  *
  * This demo shows how OpenClaw works with:
- * - Ollama (FREE local LLM - no API keys!)
+ * - Ollama (FREE local LLM - no API keys needed)
  * - Discord as the messaging channel
  * - Custom skills for data engineering tasks
  */

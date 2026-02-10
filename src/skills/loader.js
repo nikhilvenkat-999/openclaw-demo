@@ -1,7 +1,7 @@
 /**
  * Skills Loader
  *
- * Loads all available skills for the OpenClaw demo
+ * Loads all available skills for the OpenClaw demo.
  */
 
 import { pipelineMonitor } from './pipeline-monitor.js';

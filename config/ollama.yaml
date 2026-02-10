@@ -1,5 +1,5 @@
 # Ollama Configuration
-# Ollama runs AI models locally - completely FREE
+# Ollama runs AI models locally
 
 # Connection
 host: "http://localhost:11434"

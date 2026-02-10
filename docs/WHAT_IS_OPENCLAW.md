@@ -12,7 +12,7 @@
 
 ---
 
-## Why It's Revolutionary
+## Why It's Revolutionary ?
 
 ### Before (AI that Talks)
 ```

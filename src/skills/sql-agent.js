@@ -10,7 +10,7 @@
  * - PostgreSQL, MySQL, etc.
  */
 
-// Mock database tables (simulates real data)
+// Mock database tables (simulates real Data)
 const mockDatabase = {
   customers: [
     { id: 1, name: 'Ahmed Al-Rashid', email: 'ahmed@company.ae', country: 'UAE', created_at: '2026-02-08', segment: 'Enterprise' },

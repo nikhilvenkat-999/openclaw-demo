@@ -1,5 +1,5 @@
 # OpenClaw Configuration
-# Using Ollama for FREE local LLM (no API keys needed)
+# Using Ollama for FREE local LLM to avoid API keys necessity
 
 app:
   name: "OpenClaw Demo"

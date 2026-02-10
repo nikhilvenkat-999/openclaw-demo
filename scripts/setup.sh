@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# OpenClaw Demo - Setup Script
+# OpenClaw Demo -- Setup Script
 
 echo "🦞 OpenClaw Demo Setup"
 echo "======================"

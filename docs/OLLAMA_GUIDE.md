@@ -1,4 +1,4 @@
-# Ollama Setup Guide
+# Ollama Setup Guide:
 
 Ollama lets you run AI models locally - completely FREE, no API keys needed!
 

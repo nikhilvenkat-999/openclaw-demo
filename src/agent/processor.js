@@ -2,7 +2,7 @@
  * Message Processor - The "brain" of OpenClaw Demo
  *
  * This determines what to do with user messages:
- * 1. Detect intent (which skill to use)
+ * 1. Detect intent (which skill need to use)
  * 2. Execute the appropriate skill
  * 3. Format and return the response
  */

@@ -4,7 +4,7 @@
 **Audience**: CEO, Leadership Team
 **Goal**: Demonstrate the future of AI agents using OpenClaw
 
----
+--
 
 ## Pre-Demo Checklist
 

@@ -2,7 +2,7 @@
  * Report Generator Skill
  *
  * Generates automated reports combining data from multiple sources.
- * For demo purposes, aggregates from mock data.
+ * For demo purposes, aggregates from mock data
  *
  * In production, this would:
  * - Pull from real databases

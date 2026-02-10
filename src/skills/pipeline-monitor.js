@@ -2,7 +2,7 @@
  * Pipeline Monitor Skill
  *
  * Monitors data pipelines and provides status reports.
- * For demo purposes, uses mock data simulating Azure Data Factory.
+ * For demo purposes, i used mock data simulating Azure Data Factory.
  *
  * In production, you would connect to:
  * - Azure Data Factory REST API
