@@ -4,7 +4,7 @@
 
 No API keys required! Everything runs locally for free.
 
----
+--
 
 ## What This Demo Shows
 
