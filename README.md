@@ -175,14 +175,6 @@ Once running, try these in Discord:
 
 ---
 
-## Next Steps
-
-After successful demo:
-1. Connect real Azure Data Factory API
-2. Add Slack/Teams channels
-3. Deploy to cloud server
-4. Create custom skills
-
 ---
 
 ## Resources
@@ -195,4 +187,4 @@ After successful demo:
 
 ## License
 
-MIT License - Demo purposes
+MIT License - Just for Demo purposes
