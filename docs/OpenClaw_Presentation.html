@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw AI Agent Demo - Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .slide {
+            width: 100%;
+            min-height: 100vh;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 3px solid #0f3460;
+        }
+
+        .slide-title {
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #e94560;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #e94560;
+            border-bottom: 3px solid #e94560;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.8em;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            color: #00d9ff;
+            font-weight: bold;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e94560;
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin: 10px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            font-size: 1.5em;
+            line-height: 2;
+            margin-left: 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.2em;
+        }
+
+        th {
+            background: #e94560;
+            padding: 20px;
+            text-align: left;
+        }
+
+        td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .diagram {
+            background: #0f3460;
+            padding: 40px;
+            border-radius: 15px;
+            font-family: monospace;
+            font-size: 1.1em;
+            line-height: 1.8;
+            white-space: pre;
+            margin: 20px 0;
+        }
+
+        .box {
+            background: linear-gradient(135deg, #0f3460, #1a1a2e);
+            border: 2px solid #e94560;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 15px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .grid-item {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .grid-item:hover {
+            border-color: #e94560;
+        }
+
+        .grid-item h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .big-number {
+            font-size: 4em;
+            color: #e94560;
+            font-weight: bold;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1.3em;
+        }
+
+        .flow-num {
+            background: #e94560;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .checkmark {
+            color: #00ff88;
+            margin-right: 15px;
+        }
+
+        @media print {
+            .slide {
+                height: 100vh;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide slide-title">
+    <h1>OpenClaw AI Agent Demo</h1>
+    <p class="subtitle">The Future of Intelligent Automation</p>
+    <div style="margin-top: 40px;">
+        <span class="tag">FREE Local LLM</span>
+        <span class="tag">No API Keys</span>
+        <span class="tag">Zero Cost</span>
+    </div>
+    <p style="margin-top: 60px; font-size: 1.3em; color: #888;">Powered by Ollama + Discord</p>
+</div>
+
+<!-- Slide 2: What is OpenClaw -->
+<div class="slide">
+    <h2>What is OpenClaw?</h2>
+    <h3>An AI Agent Framework</h3>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="highlight">AI Agent</span></td>
+            <td>Autonomous AI that can understand, decide, and act</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Multi-Skill</span></td>
+            <td>Pluggable skills for different tasks</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Chat Interface</span></td>
+            <td>Natural language via Discord/Slack/Teams</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Local LLM</span></td>
+            <td>Uses Ollama - completely FREE</td>
+        </tr>
+    </table>
+    <p style="font-size: 1.4em; margin-top: 30px; text-align: center;">
+        <strong>Key Point:</strong> AI that works <span class="highlight">FOR</span> you, not just responds <span class="highlight">TO</span> you
+    </p>
+</div>
+
+<!-- Slide 3: Why This Matters -->
+<div class="slide">
+    <h2>Why This Matters</h2>
+    <h3>Traditional Chatbots vs AI Agents</h3>
+    <div class="two-col">
+        <div class="box">
+            <h3 style="color: #ff6b6b;">Traditional Chatbots</h3>
+            <ul style="font-size: 1.2em;">
+                <li>Pre-scripted responses</li>
+                <li>Limited to FAQ</li>
+                <li>No context awareness</li>
+                <li>Single purpose</li>
+            </ul>
+        </div>
+        <div class="box" style="border-color: #00ff88;">
+            <h3 style="color: #00ff88;">AI Agents (OpenClaw)</h3>
+            <ul style="font-size: 1.2em;">
+                <li>Dynamic understanding</li>
+                <li>Can execute tasks</li>
+                <li>Remembers conversation</li>
+                <li>Multiple skills</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Demo Skills Overview -->
+<div class="slide">
+    <h2>Demo: 3 AI Skills</h2>
+    <div class="grid">
+        <div class="grid-item">
+            <div class="emoji">📊</div>
+            <h3>Pipeline Monitor</h3>
+            <p>Real-time ETL/data pipeline monitoring and alerts</p>
+        </div>
+        <div class="grid-item">
+            <div class="emoji">🔍</div>
+            <h3>SQL Query Agent</h3>
+            <p>Natural language to SQL - no coding required</p>
+        </div>
+        <div class="grid-item">
+            <div class="emoji">📝</div>
+            <h3>Report Generator</h3>
+            <p>Automated daily reports and summaries</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Pipeline Monitor -->
+<div class="slide">
+    <h2>Skill 1: Pipeline Monitor</h2>
+    <div class="two-col">
+        <div>
+            <h3>What it does:</h3>
+            <ul>
+                <li>Monitors ETL/data pipeline status</li>
+                <li>Reports failures instantly</li>
+                <li>Suggests fixes for issues</li>
+            </ul>
+            <h3 style="margin-top: 40px;">Example Commands:</h3>
+            <div class="box" style="font-size: 1.2em;">
+                "Check pipeline status"<br>
+                "Are there any failed pipelines?"<br>
+                "What's wrong with sales pipeline?"
+            </div>
+        </div>
+        <div>
+            <h3>Business Value:</h3>
+            <div class="flow-step"><span class="checkmark">✓</span> Instant visibility into operations</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Faster incident response</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Reduced downtime</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Proactive issue detection</div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: SQL Query Agent -->
+<div class="slide">
+    <h2>Skill 2: SQL Query Agent</h2>
+    <div class="two-col">
+        <div>
+            <h3>What it does:</h3>
+            <ul>
+                <li>Converts plain English to SQL</li>
+                <li>Executes queries automatically</li>
+                <li>Explains results clearly</li>
+            </ul>
+            <h3 style="margin-top: 40px;">Example Commands:</h3>
+            <div class="box" style="font-size: 1.2em;">
+                "How many customers do we have?"<br>
+                "Show sales from last week"<br>
+                "What's our top selling product?"
+            </div>
+        </div>
+        <div>
+            <h3>Business Value:</h3>
+            <div class="flow-step"><span class="checkmark">✓</span> Democratizes data access</div>
+            <div class="flow-step"><span class="checkmark">✓</span> No SQL knowledge needed</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Faster business insights</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Reduces data team load</div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: Report Generator -->
+<div class="slide">
+    <h2>Skill 3: Report Generator</h2>
+    <div class="two-col">
+        <div>
+            <h3>What it does:</h3>
+            <ul>
+                <li>Creates daily/weekly summaries</li>
+                <li>Aggregates metrics automatically</li>
+                <li>Formats for readability</li>
+            </ul>
+            <h3 style="margin-top: 40px;">Example Commands:</h3>
+            <div class="box" style="font-size: 1.2em;">
+                "Generate daily report"<br>
+                "Summarize today's operations"<br>
+                "Create sales summary"
+            </div>
+        </div>
+        <div>
+            <h3>Business Value:</h3>
+            <div class="flow-step"><span class="checkmark">✓</span> Saves hours of manual work</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Consistent report format</div>
+            <div class="flow-step"><span class="checkmark">✓</span> On-demand insights</div>
+            <div class="flow-step"><span class="checkmark">✓</span> Always up-to-date</div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Why Ollama -->
+<div class="slide">
+    <h2>Why Ollama? (FREE Local LLM)</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th style="background: #00d9ff; color: #000;">Ollama (Our Choice)</th>
+            <th>Cloud APIs (OpenAI/etc)</th>
+        </tr>
+        <tr>
+            <td><strong>Cost</strong></td>
+            <td style="color: #00ff88; font-weight: bold;">FREE</td>
+            <td>$0.01-0.06 per 1K tokens</td>
+        </tr>
+        <tr>
+            <td><strong>API Key</strong></td>
+            <td style="color: #00ff88; font-weight: bold;">Not needed</td>
+            <td>Required + billing setup</td>
+        </tr>
+        <tr>
+            <td><strong>Data Privacy</strong></td>
+            <td style="color: #00ff88; font-weight: bold;">Stays on our servers</td>
+            <td>Sent to third party</td>
+        </tr>
+        <tr>
+            <td><strong>Internet</strong></td>
+            <td style="color: #00ff88; font-weight: bold;">Works offline</td>
+            <td>Requires connection</td>
+        </tr>
+    </table>
+    <p style="text-align: center; margin-top: 40px; font-size: 1.5em;">
+        <strong>Estimated Monthly Savings:</strong> <span class="highlight">$500 - $5,000+</span>
+    </p>
+</div>
+
+<!-- Slide 9: Architecture -->
+<div class="slide">
+    <h2>Architecture Overview</h2>
+    <div class="diagram">
+                        ┌─────────────────────┐
+                        │     User Message    │
+                        │  (Discord Channel)  │
+                        └──────────┬──────────┘
+                                   │
+                                   ▼
+                    ┌──────────────────────────────┐
+                    │      OpenClaw Agent          │
+                    │   (Intent Detection +        │
+                    │    Skill Routing)            │
+                    └──────────────┬───────────────┘
+                                   │
+              ┌────────────────────┼────────────────────┐
+              │                    │                    │
+              ▼                    ▼                    ▼
+        ┌───────────┐       ┌───────────┐       ┌───────────┐
+        │ Pipeline  │       │ SQL Query │       │  Report   │
+        │  Monitor  │       │   Agent   │       │ Generator │
+        └───────────┘       └───────────┘       └───────────┘
+                                   │
+                                   ▼
+                    ┌──────────────────────────────┐
+                    │   Ollama (Local LLM)         │
+                    │   llama3.2 - FREE & Private  │
+                    └──────────────────────────────┘
+    </div>
+</div>
+
+<!-- Slide 10: How It Works -->
+<div class="slide">
+    <h2>How It Works</h2>
+    <div class="flow-step"><div class="flow-num">1</div><span><strong>User Sends Message</strong> - "@OpenClaw check pipeline status"</span></div>
+    <div class="flow-step"><div class="flow-num">2</div><span><strong>Intent Detection</strong> - Keywords analyzed, "pipeline" detected</span></div>
+    <div class="flow-step"><div class="flow-num">3</div><span><strong>Skill Routing</strong> - Routes to Pipeline Monitor skill</span></div>
+    <div class="flow-step"><div class="flow-num">4</div><span><strong>Skill Execution</strong> - Checks pipeline data, gathers status</span></div>
+    <div class="flow-step"><div class="flow-num">5</div><span><strong>LLM Processing</strong> - Ollama formats response naturally</span></div>
+    <div class="flow-step"><div class="flow-num">6</div><span><strong>Response Delivered</strong> - Formatted status sent to Discord</span></div>
+</div>
+
+<!-- Slide 11: Security -->
+<div class="slide">
+    <h2>Security & Privacy</h2>
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>How We Handle It</th>
+        </tr>
+        <tr>
+            <td><span class="highlight">Data Privacy</span></td>
+            <td>All processing happens locally - no external data transfer</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Credentials</span></td>
+            <td>Stored securely in environment variables</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Access Control</span></td>
+            <td>Discord permissions + bot scoping</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Audit Trail</span></td>
+            <td>All interactions logged for compliance</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">No External Calls</span></td>
+            <td>LLM runs entirely on our infrastructure</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Slide 12: Use Cases -->
+<div class="slide">
+    <h2>Potential Use Cases</h2>
+    <table>
+        <tr>
+            <th>Department</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td><span class="highlight">Data Engineering</span></td>
+            <td>Pipeline monitoring, ETL status, data quality alerts</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Analytics</span></td>
+            <td>Natural language queries, ad-hoc reports</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Operations</span></td>
+            <td>System health checks, incident alerts</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">Finance</span></td>
+            <td>Automated financial summaries, budget tracking</td>
+        </tr>
+        <tr>
+            <td><span class="highlight">HR</span></td>
+            <td>Policy Q&A, onboarding assistance</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Slide 13: Roadmap -->
+<div class="slide">
+    <h2>Implementation Roadmap</h2>
+    <div class="flow-step" style="font-size: 1.4em;">
+        <div class="flow-num" style="background: #00ff88; color: #000;">1</div>
+        <span><strong>Phase 1: POC</strong> - Current demo (Complete)</span>
+    </div>
+    <div class="flow-step" style="font-size: 1.4em;">
+        <div class="flow-num">2</div>
+        <span><strong>Phase 2: Pilot</strong> - Real data integration</span>
+    </div>
+    <div class="flow-step" style="font-size: 1.4em;">
+        <div class="flow-num">3</div>
+        <span><strong>Phase 3: Production</strong> - Full deployment</span>
+    </div>
+    <div class="flow-step" style="font-size: 1.4em;">
+        <div class="flow-num">4</div>
+        <span><strong>Phase 4: Scale</strong> - Additional skills & teams</span>
+    </div>
+</div>
+
+<!-- Slide 14: Key Takeaways -->
+<div class="slide">
+    <h2>Key Takeaways</h2>
+    <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="grid-item">
+            <div class="emoji">💰</div>
+            <h3>Cost-Effective</h3>
+            <p>Zero LLM API costs</p>
+        </div>
+        <div class="grid-item">
+            <div class="emoji">🔒</div>
+            <h3>Private</h3>
+            <p>Data never leaves our servers</p>
+        </div>
+        <div class="grid-item">
+            <div class="emoji">🔧</div>
+            <h3>Extensible</h3>
+            <p>Easy to add new skills</p>
+        </div>
+        <div class="grid-item">
+            <div class="emoji">💬</div>
+            <h3>Accessible</h3>
+            <p>Natural language interface</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 15: Live Demo -->
+<div class="slide slide-title">
+    <h1>Live Demo</h1>
+    <p class="subtitle">Let's See It In Action!</p>
+    <div style="margin-top: 50px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div class="flow-step"><div class="flow-num">1</div><span>Basic greeting test</span></div>
+        <div class="flow-step"><div class="flow-num">2</div><span>Pipeline status check</span></div>
+        <div class="flow-step"><div class="flow-num">3</div><span>SQL query in plain English</span></div>
+        <div class="flow-step"><div class="flow-num">4</div><span>Generate a report</span></div>
+    </div>
+</div>
+
+<!-- Slide 16: Thank You -->
+<div class="slide slide-title">
+    <h1>Thank You!</h1>
+    <p class="subtitle">Questions?</p>
+    <div style="margin-top: 50px;">
+        <p style="font-size: 1.3em; margin: 15px 0;">OpenClaw: github.com/openclaw/openclaw</p>
+        <p style="font-size: 1.3em; margin: 15px 0;">Ollama: ollama.com</p>
+    </div>
+    <p style="margin-top: 60px; font-size: 1.1em; color: #666;">
+        "The best way to understand AI agents is to see them work"
+    </p>
+</div>
+
+</body>
+</html>
